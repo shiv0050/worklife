@@ -1,0 +1,10 @@
+{% extends 'tasks/base.html'%}
+{% block content %}
+    <div>
+        <h1 class="text-center">Done with it?</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Mark as Completed"/>
+        </form>
+    </div>
+{% endblock %}

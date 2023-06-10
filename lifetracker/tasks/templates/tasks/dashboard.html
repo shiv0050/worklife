@@ -1,0 +1,13 @@
+{% extends 'tasks/base.html'%}
+{% block content %}
+    <div>
+    <h1 class="text-center">My Day at Glance</h1>
+    <a href="{% url 'view-task' %}">My tasks</a>
+    <br/>
+    {% for cat in categories %}
+        {{cat.name}} {{cat.overhead}}
+        <br/>
+        <hr/>
+    {% endfor %}
+    </div>
+{% endblock %}

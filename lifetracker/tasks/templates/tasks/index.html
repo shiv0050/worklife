@@ -1,0 +1,11 @@
+{% extends 'tasks/base.html'%}
+{% block content %}
+    <h1 class="text-center">My Life ... My Rules</h1>
+    <h2>Today's Utilization : {{utilization}} %</h2>
+    <a href="{% url 'create-task' %}">Create a task</a>
+    <a href="{% url 'dashboard' %}">My Dashboard</a>
+
+    <hr/>
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'tasks/base.html'%}
+{% block content %}
+<div>
+    <a href="{% url '' %}">Home</a>
+
+    {% for tsk in task %}
+    {{tsk.name}}
+    <br/>
+    {{tsk.category}}
+    <br/>
+    {{tsk.timeStarted}}
+    <br/>
+    {{tsk.timeAlloted}}
+    <br/>
+    {{tsk.timeCompleted}}
+    <br/>
+    {{tsk.overhead}}
+    <br/>
+    <a href="{% url 'update-task' tsk.id %}">Update task</a>
+    <br/>
+    <button class="btn btn-primary"> <a href="{% url 'complete-task' tsk.id %}">Complete task</a></button>
+    <br/><hr/>
+    {% endfor %}
+
+</div>
+{% endblock %}
